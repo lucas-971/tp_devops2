@@ -1,5 +1,7 @@
+import os
+
 a = 1
-b = 2
+b = os.environ['VAR_TEST']
 
 if a == b:
     print("A est pareil que B.")
