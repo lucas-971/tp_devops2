@@ -5,7 +5,6 @@ def proba_extraction(k, nb_rouge, nb_blanche, nb_noire):
     total_boules = nb_rouge + nb_blanche + nb_noire
 
     total_combinaisons = math.comb(total_boules, k)
-
     combinaisons_une_de_chaque = math.comb(nb_rouge, 1) * math.comb(nb_blanche, 1) * math.comb(nb_noire, 1)
 
     proba = combinaisons_une_de_chaque / total_combinaisons
