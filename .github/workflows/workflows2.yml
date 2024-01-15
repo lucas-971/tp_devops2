@@ -10,9 +10,8 @@ jobs:
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v2
-    
-    - env: 
-      VARIABLE: ${{ vars.VAR_TEST}}
+      env: 
+        VARIABLE: ${{ vars.VAR_TEST }}
 
     - name: Set up Python 3.8
       uses: actions/setup-python@v2
