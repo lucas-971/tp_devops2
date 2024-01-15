@@ -3,6 +3,9 @@ name: Workflow2
 on:
   workflow_dispatch:
 
+env: 
+  VARIABLE: ${{ vars.VAR_TEST }}
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -10,8 +13,6 @@ jobs:
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v2
-      env: 
-        VARIABLE: ${{ vars.VAR_TEST }}
 
     - name: Set up Python 3.8
       uses: actions/setup-python@v2
