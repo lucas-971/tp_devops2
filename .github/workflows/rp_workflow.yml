@@ -1,9 +1,8 @@
 name: rp_workflow
 
-on: [pull_request | push]
-
-env: 
-  VARIABLE: ${{ vars.VAR_TEST }}
+on: 
+  push:
+  pull_request:
 
 jobs:
   build:
