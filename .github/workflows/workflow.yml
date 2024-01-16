@@ -17,6 +17,8 @@ jobs:
   test:
     needs: build
     runs-on: ubuntu-latest
-    if: failure()
-    run: |
-      echo "le job à échoué"
+    steps:
+    - name: failure
+      if: failure()
+      run: |
+        echo "le job à échoué"
