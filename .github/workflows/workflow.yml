@@ -15,7 +15,7 @@ jobs:
           python script.py
 
   test:
-    needs: build
+    needs: job1
     runs-on: ubuntu-latest
     steps:
     - name: failure
