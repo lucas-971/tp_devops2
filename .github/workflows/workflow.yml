@@ -9,10 +9,9 @@ env:
 
 jobs:
   job1:
-    runs-on : ubuntu-latest      
-    - name: test
-      if: ${{A > 0 &&  B > 0}}
-      steps:
-      - name: afficher les valeurs 
-        run: |
-          echo "a = $A et b = $B"
+    runs-on : ubuntu-latest
+    if: ${{A > 0 && B > 0}}
+    steps:
+    - name: afficher les valeurs 
+      run: |
+        echo "a = $A et b = $B"
