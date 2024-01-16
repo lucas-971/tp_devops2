@@ -11,8 +11,8 @@ env:
 jobs:
   job1:
     runs-on : ubuntu-latest
-    if: ${{ a > 0 && b > 0}}
+    if: $a > 0 && $b > 0
     steps:
     - name: afficher les valeurs 
       run: |
-        echo "a = ${{a}} et b = ${{b}}"
+        echo "a = $a et b = $b"
