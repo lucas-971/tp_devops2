@@ -6,11 +6,13 @@ on:
 jobs:
   job1:
     runs-on : ubuntu-latest
-    env:
-      a: 2
-      b: 3
-    if: ${{a}} > 0 && ${{b}} > 0
+    - name: Variables
+      env:
+        A: 2
+        B: 3
+
+    if: ${{A}} > 0 && ${{B}} > 0
     steps:
     - name: afficher les valeurs 
       run: |
-        echo "a = $a et b = $b"
+        echo "a = $A et b = $B"
