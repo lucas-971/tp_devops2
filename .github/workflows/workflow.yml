@@ -1,7 +1,9 @@
 name : Tag Workflow
 
-on: 
-  workflow_dispatch:
+on :
+  push:
+    tags:
+      - 'release*'
 
 jobs:
   job1:
@@ -12,7 +14,6 @@ jobs:
           VAR: ${{ vars.VAR1 }}
         run: |
           echo $VAR
-          python script.py
 
   job2:
     needs: job1
