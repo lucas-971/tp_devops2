@@ -1,4 +1,4 @@
 import os
 
-c = os.environ["A"] + os.environ["B"]
+c = int(os.environ["A"]) + int(os.environ["B"])
 print(c)
