@@ -3,15 +3,15 @@ name : Tag Workflow
 on: 
   workflow_dispatch:
 
+env:
+  A: 2
+  B: 3
+
 jobs:
   job1:
-    runs-on : ubuntu-latest
-    - name: Variables
-      env:
-        A: 2
-        B: 3
+    runs-on : ubuntu-latest      
     - name: test
-      if: ${{A}} > 0 && ${{B}} > 0
+      if: ${{A > 0 &&  B > 0}}
       steps:
       - name: afficher les valeurs 
         run: |
