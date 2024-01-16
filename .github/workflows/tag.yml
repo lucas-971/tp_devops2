@@ -1,7 +1,9 @@
 name : Tag Workflow
 
-on: 
-  workflow_dispatch:
+on :
+  push:
+    tags:
+      - 'v*'
 
 
 jobs:
