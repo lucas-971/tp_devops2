@@ -1,9 +1,7 @@
-name : Tag Workflow
+name : Workflow
 
 on: 
   workflow_dispatch:
-
-
 
 jobs:
   job1:
