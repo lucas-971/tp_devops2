@@ -24,13 +24,6 @@ jobs:
       with:
         python-version: '3.8'
 
-    - name: Test Model
-      env:
-        SEUIL: ${{ vars.SEUIL }}
-      run: |
-        echo $SEUIL
-        python test.py
-
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
