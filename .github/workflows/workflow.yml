@@ -10,9 +10,9 @@ jobs:
       env:
         A: 2
         B: 3
-
-    if: ${{A}} > 0 && ${{B}} > 0
-    steps:
-    - name: afficher les valeurs 
-      run: |
-        echo "a = $A et b = $B"
+    - name: test
+      if: ${{A}} > 0 && ${{B}} > 0
+      steps:
+      - name: afficher les valeurs 
+        run: |
+          echo "a = $A et b = $B"
