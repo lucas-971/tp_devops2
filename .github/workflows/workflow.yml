@@ -9,8 +9,8 @@ jobs:
   job1:
     runs-on : ubuntu-latest
     env:
-      A: 2
-      B: 3
+      A: ${{vars.A}}
+      B: ${{vars.B}}
     if: ${{A}} > 0 && ${{B}} > 0
     steps:
     - name: afficher les valeurs 
