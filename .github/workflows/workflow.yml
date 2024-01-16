@@ -3,14 +3,15 @@ name : Tag Workflow
 on: 
   workflow_dispatch:
 
-env:
-  A: 2
-  B: 3
+
 
 jobs:
   job1:
     runs-on : ubuntu-latest
-    if: ${{A > 0 && B > 0}}
+    env:
+      A: 2
+      B: 3
+    if: ${{A}} > 0 && ${{B}} > 0
     steps:
     - name: afficher les valeurs 
       run: |
