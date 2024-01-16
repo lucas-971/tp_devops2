@@ -8,11 +8,27 @@ on:
 jobs:
   job1:
     runs-on : ubuntu-latest
-    env:
-      A: ${{vars.A}}
-      B: ${{vars.B}}
-    if: $A > 0 && $B > 0
+    if: ${{vars.A}} > 0 && ${{vars.B}} > 0
     steps:
     - name: afficher les valeurs 
       run: |
-        echo "a = $A et b = $B"
+        echo "a = ${{vars.B}} et b = ${{vars.B}}"
+  
+  job2:
+    runs-on : ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.8'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+      
+    - name: Run code
+      run: |
+        python multiplication.py
