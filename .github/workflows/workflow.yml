@@ -12,6 +12,7 @@ jobs:
           VAR: ${{ vars.VAR1 }}
         run: |
           echo $VAR
+          python script.py
 
   test:
     needs: job1
